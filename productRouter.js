@@ -38,6 +38,15 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/categories", async (req, res, next) => {
+  try {
+    const categories = await Category.findAll();
+    res.json(categories);
+  } catch (e) {
+    next(e);
+  }
+});
+
 // GET - /products/:id Returns a specific product with it's category
 
 router.get("/:id", async (req, res, next) => {
