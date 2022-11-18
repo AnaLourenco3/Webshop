@@ -1,0 +1,28 @@
+@server = http://localhost:4000
+@bearer = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2Njg3NzI5NDIsImV4cCI6MTY2ODc4MDE0Mn0.UmfknYzsIosPHOJ3mdX7ZIXNDylFZx68ok0riHKGVTc
+
+### POST login
+POST  {{server}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "ana.lourenco@code.nl",
+  "password": "ciaomamma"
+}
+
+### POST signup
+
+POST {{server}}/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Ana Lourenco",
+  "email": "ana.lourenco@code.nl",
+  "password": "ciaomamma"
+}
+
+
+
+### Get all charging users
+GET  {{server}}/products
+# Authorization: Bearer {{bearer}}
