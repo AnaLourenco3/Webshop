@@ -1,8 +1,6 @@
 const express = require("express");
 const { Router } = express;
 const User = require("./models").user;
-const Product = require("./models").product;
-const Category = require("./models").category;
 
 const router = new Router();
 
